@@ -1,14 +1,8 @@
 from pyspark import SparkContext
 from pyspark.sql import SparkSession
-from pyspark.streaming import StreamingContext
 
 import os
-os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.0 pyspark-shell'
-
-# # Create a SparkContext
-# sc = SparkContext(appName="SparkStreamingApp")
-# # Create a StreamingContext with a batch interval of 1 second
-# ssc = StreamingContext(sparkContext=sc, batchDuration=1)
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 pyspark-shell'
 
 spark = SparkSession \
     .builder \
